@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const SALT_ROUNDS = 12;
 
-// Register
 router.post(
   '/register',
   body('email').isEmail(),
@@ -39,7 +38,6 @@ res.status(201).json({ user: { id: user._id, email: user.email, full_name: user.
   }
 );
 
-// Login
 router.post(
   '/login',
   body('email').isEmail(),

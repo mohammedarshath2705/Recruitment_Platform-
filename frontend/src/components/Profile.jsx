@@ -1,4 +1,3 @@
-// Profile.jsx
 import { logout } from "../auth";
 
 export default function Profile({ user }) {

@@ -30,13 +30,10 @@ export default function Login() {
     <div className="flex items-center justify-center min-h-screen p-4">
       <div className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-md sm:p-10 md:max-w-lg transition-transform transform hover:scale-105">
 
-        {/* Auth form */}
-        <AuthForm type="login" onSubmit={handleLogin} />
+=        <AuthForm type="login" onSubmit={handleLogin} />
 
-        {/* Error message */}
         {error && <p className="text-red-500 text-center mt-4">{error}</p>}
 
-        {/* Register link */}
         <p className="text-center mt-6 text-gray-600">
           Don’t have an account?{" "}
           <span

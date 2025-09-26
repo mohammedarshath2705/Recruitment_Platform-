@@ -17,7 +17,7 @@ export default function Register() {
     } 
     else if (res?.errors && Array.isArray(res.errors) && res.errors.length > 0) {
       const messages = res.errors.map(e => e.msg).join(", ");
-      setError(messages); // ✅ string now
+      setError(messages); 
     } 
     else if (res?.error) {
       setError(typeof res.error === "string" ? res.error : res.error?.error || "Registration failed");
@@ -33,17 +33,14 @@ export default function Register() {
   return (
     <div className="flex items-center justify-center min-h-screen p-4">
       <div className="bg-white shadow-2xl rounded-3xl p-8 w-full max-w-md sm:p-10 md:max-w-lg">
-        {/* Auth form */}
         <AuthForm type="register" onSubmit={handleRegister} />
 
-        {/* Error message */}
         {error && (
           <p className="text-red-400 text-center mt-4 font-medium">
             {error}
           </p>
         )}
 
-        {/* Login link */}
         <p className="text-center mt-6 text-gray-600">
           Already have an account?{" "}
           <span
